@@ -1,0 +1,8 @@
+name: Get Issue Detail
+on: [issues] # allows multiple event triggers
+jobs:
+  get-issue-detail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get issues details
+        run: echo "${{ toJSON(github.event.issue) }}"
